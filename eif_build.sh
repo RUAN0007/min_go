@@ -1,0 +1,1 @@
+ nitro-cli build-enclave --docker-uri main_image:1.0 --output-file main-image.eif
