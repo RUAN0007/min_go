@@ -1,16 +1,14 @@
-$ docker load -i main_image.tar 
-Loaded image: main_image:1.0
-
-$ nitro-cli build-enclave --docker-uri main_image:1.0 --output-file main-image.eif 
-
+[ec2-user@ip-172-31-6-239 min_go]$ docker load -i enclave_kaniko.tar 
+Loaded image: kaniko_enclave:latest
+[ec2-user@ip-172-31-6-239 min_go]$  nitro-cli build-enclave --docker-uri kaniko_enclave:latest --output-file kaniko_enclave.eif 
 Start building the Enclave Image...
 Using the locally available Docker image...
 Enclave Image successfully created.
 {
   "Measurements": {
     "HashAlgorithm": "Sha384 { ... }",
-    "PCR0": "2a607bc278275fbac36528808ac04ea4d7796dd7c10565f5432b7a735e6a35f9e4e3efb5fd4bc918bced38605b8ceb22",
-    "PCR1": "52b919754e1643f4027eeee8ec39cc4a2cb931723de0c93ce5cc8d407467dc4302e86490c01c0d755acfe10dbf657546",
-    "PCR2": "c8433710cf72999d8ef890b4bb1254675c020f938f275eb14ebbf6bd3468cdab858608f10d5849c3a47264eb8fc1954b"
+    "PCR0": "71da82f267f9746e521c29a50b866f665345a6acfae0b1cf6451e37ab748074c3dc481da2b08e7b7178ffa248e49d5ac",
+    "PCR1": "4b4d5b3661b3efc12920900c80e126e4ce783c522de6c02a2a5bf7af3a2b9327b86776f188e4be1c1c404a129dbda493",
+    "PCR2": "2891f6ea283f93d81a5cd61452ed3724b3376c7aef069ccd9c5d1e854725c09480594b7cff08cbf69bab58939f619b18"
   }
 }
