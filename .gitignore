@@ -1,2 +1,3 @@
-main
-main_image.tar
+/main
+/main_image.tar
+/enclave_kaniko.tar
